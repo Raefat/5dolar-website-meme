@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="text-center">File Upload</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+        {% if regisetered %}
+            <h1>WELCOME BACK</h1>
+        {% else %}
+        <form enctype="multipart/form-data" method="POST" >
+            {{ user_form.as_p }}
+            {{ upload_form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Register">
+        </form>
+        </div>
+        <div class="col"></div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

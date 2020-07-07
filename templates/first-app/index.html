@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+
+<div class="jumbotron">
+    <h1 class="font-weight-light text-primary text-center">MAIN PAGE</h1>
+    <p class="lead text-center">Welcome in the main page</p>
+</div>
+
+
+    
+<div class="container">
+{%if insert_me%}
+    <table>
+    <thead>
+        <th> Site Name </th>
+        <th> Date Accessed </th>
+    </thead>
+    {%for acc in insert_me%}
+    <tr>
+        <td>{{acc.name}}</td>
+        <td>{{acc.date}}</td>
+    <tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <h1> NO DATA TO BE SHOWN </h1>
+    {% endif %}
+    
+</div>
+{% endblock %}
+

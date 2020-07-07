@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="text-center" style="font-family: Yellowtail; font-size:100px;">forms with models</h1>
+</div>
+
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form method="POST">
+                {{my_form.as_p}}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}

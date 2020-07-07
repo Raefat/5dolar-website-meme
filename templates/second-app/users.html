@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% block content %}
+<br/>
+
+{% if users %}
+{% for u in users %}
+<div class="container p-3 m-5 border border-success">
+    <h4>User Info :</h4>
+    <ul>
+        <li>{{u.first_name|upper}}</li>
+        <li>{{u.last_name}}</li>
+        <li>{{u.email}}</li>
+    </ul>
+</div>
+
+{% endfor %}
+{% else %}
+<h2>No data to be shown </h2>
+{% endif %}
+
+{% endblock %}

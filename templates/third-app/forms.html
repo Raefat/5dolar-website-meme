@@ -1,0 +1,51 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="text-center">FORMS HERE</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <form  method="POST">
+                {{data.as_p}}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger"> 
+                <i class="fa fa-share" aria-hidden="true" style="font-size:27px"> SUBMIT </i>
+                </button>
+            </form>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <div class="form-group">
+          <label for="name">Name :</label>
+          <input type="text" class="form-control" name="" id="">
+          <label for="email">Email :</label>
+          <input type="email" class="form-control" name="" id="">
+          <button type="submit" class="btn btn-primary">Submit</button>
+</div> {% endcomment %}
